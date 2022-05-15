@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom'
-import Logo from '../components/Logo'
 import main from '../assets/images/main.svg'
 import Wrapper from '../assets/wrappers/LandingPage'
+import { Logo } from '../components'
 
-export default function landing() {
+export default function Landing() {
 	return (
 		<Wrapper>
 			<nav>
