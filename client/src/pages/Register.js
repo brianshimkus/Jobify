@@ -12,7 +12,7 @@ const initialState = {
 export default function Register() {
 	const [values, setValues] = useState(initialState)
 
-	const { isLoading, showAlert, displayAlert } = useAppContext()
+	const { showAlert, displayAlert } = useAppContext()
 
 	const toggleMember = () => {
 		setValues({ ...values, isMember: !values.isMember })
