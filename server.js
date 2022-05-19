@@ -1,7 +1,9 @@
 import express from 'express'
 import errorHandlerMiddleware from './middleware/error-handler.js'
 import notFoundMiddleware from './middleware/not-found.js'
+import dotenv from 'dotenv'
 const app = express()
+dotenv.config()
 
 app.get('/', (req, res) => {
 	res.send('Welcome!')
