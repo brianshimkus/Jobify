@@ -14,6 +14,13 @@ class BadRequestError extends CustomAPIError {
 	}
 }
 
+class NotFoundError extends CustomAPIError {
+	constructor(message) {
+		super(message)
+		this.statusCode = StatusCodes.NOT_FOUND
+	}
+}
+
 const register = async (req, res) => {
 	const { name, email, password } = req.body
 
