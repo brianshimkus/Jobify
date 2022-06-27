@@ -8,6 +8,9 @@ const initialState = {
 	showAlert: false,
 	alertText: '',
 	alertType: '',
+	user: null,
+	token: null,
+	userLocation: '',
 }
 
 const AppContext = React.createContext()
@@ -24,6 +27,10 @@ const AppProvider = ({ children }) => {
 		setTimeout(() => {
 			dispatch({ type: CLEAR_ALERT })
 		}, 3000)
+	}
+
+	const registerUser = async (currentUser) => {
+		console.log(currentUser)
 	}
 
 	return (
