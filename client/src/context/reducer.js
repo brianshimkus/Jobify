@@ -46,6 +46,16 @@ const reducer = (state, action) => {
 		}
 	}
 
+	if (action.type === REGISTER_USER_ERROR) {
+		return {
+			...state,
+			isLoading: false,
+			showAlert: true,
+			alertText: action.payload.msg,
+			alertType: 'danger',
+		}
+	}
+
 	throw new Error(`no such action : ${action.type}`)
 }
 
