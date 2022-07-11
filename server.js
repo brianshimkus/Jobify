@@ -6,9 +6,14 @@ import connectDB from './db/connect.js'
 import authRouter from './routes/authRoutes.js'
 import jobsRouter from './routes/jobsRoutes.js'
 import 'express-async-errors'
+import morgan from 'morgan'
 
 const app = express()
 dotenv.config()
+
+if (process.env.NODE_ENV !== 'production') {
+	app.use(morgan('dev'))
+}
 
 app.use(express.json())
 
